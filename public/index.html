@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>自己紹介ジェネレーター</title>
+  </head>
+
+  <body style="background: #fffffe;">
+    <header>
+      <div class="jumbotron">
+        <h1 class="display-4">ランダム自己紹介ジェネレーター</h1>
+        <hr class="my-4">
+        <p>
+          機械学習でこの世に存在しない人の画像を生成するwebサイト「This Person Does Not Exist」<br>
+          で表示された画像に対してランダムにプロフィールを付け加えることで、勝手に自己紹介するwebサイトです。
+        </p>
+        <input class="btn btn-primary" href="#" role="button" value="自己紹介をジェネレートする" onclick="window.location.reload();" />
+      </div>
+    </header>
+
+    <main class="text-center">
+      <img class="img-fluid" style="max-width: 500px;" alt="not exist person" id="image" src="https://thispersondoesnotexist.com/image">
+      <div class="lead" style="padding: 30px;">
+        <div id="name">こんにちは。私の名前は．．．</div>
+        <div id="location">私の住居は．．．</div>
+        <div id="designation">私の仕事は．．．</div>
+        <div id="root"></div>
+      </div>
+    </main>
+
+
+    <footer>
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item text-left">
+              <p class="lead font-weight-bold">web API</p>
+              <hr class="my-4">
+              <a class="nav-link">・画像生成 「This Person Does Not Exist」（機械学習でこの世に存在しない人物の画像を生成するwebサイト）</a>
+              <a href="https://thispersondoesnotexist.com/">「This Person Does Not Exist」のページへ</a>
+              <a class="nav-link">・プロフィールデータ 「testimonial API」（最大10件のダミープロフィールデータを取得出来るAPI）</a>
+              <a href="https://testimonialapi.toolcarton.com/">「testimonial API」のページへ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body" style="background: #094067; color:#fffffe">
+          <h5 class="card-title">このwebページは、日本大学文理学部情報科学科のWebプログラミング演習課題として作成されたものです。</h5>
+          <p class="card-text">5420049 ウルフ智也</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
