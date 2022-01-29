@@ -1,31 +1,37 @@
 import ReactDOM from 'react-dom';
 import { useEffect } from "react";
-import { fetchData } from "./Api.js";
-import './App.css';
+ 
+let num = 0;
+
+export async function fetchData() {
+  num = Math.floor(Math.random() * (10)) + 1;
+  const response = await fetch(
+    `https://testimonialapi.toolcarton.com/api/${num}`
+  );
+  const data = await response.json();
+  return data;
+}
 
 function Main() {
-  const data = null;
   useEffect(() => {
     fetchData().then((data) => {
       ReactDOM.render(
-        <a>こんにちは。私の名前は{data.name}です。</a>,
+        <a>{data.name}.</a>,
         document.getElementById("name"));
+      document.getElementById("name").setAttribute("glot-model", "name" + num);
       ReactDOM.render(
-        <a>私は{data.location}に住んでいます。</a>,
-        document.getElementById("location"));
+        <a>I live in {data.location}.</a>,
+        document.getElementById("address"));
+      document.getElementById("address").setAttribute("glot-model", "address" + num)
       ReactDOM.render(
-        <a>私は{data.designation}です。</a>,
+        <a>I am a {data.designation}.</a>,
         document.getElementById("designation"));
+      document.getElementById("designation").setAttribute("glot-model", "designation" + num)
     });
   }, []);
 
   return (null)
 };
 
-function App() {
-  return (
-    <Main />
-  );
-}
 
-export default App;
+export default Main;
